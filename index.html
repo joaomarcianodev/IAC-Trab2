@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo HEX - IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Jogo HEX - IA</h1>
+
+    <div id="controls-container">
+        
+        <div class="control-item">
+            <label for="mode-select">Modo de Jogo</label>
+            <select id="mode-select">
+                <option value="pvp">Player vs Player</option>
+                <option value="pvia" selected>Player vs IA</option>
+            </select>
+        </div>
+
+        <div class="control-item">
+            <label for="size-select">Tamanho</label>
+            <select id="size-select">
+                <option value="5" selected>5x5</option>
+                <option value="7">7x7</option>
+                <option value="11">11x11</option>
+            </select>
+        </div>
+        <div id="ai-settings-group">
+            <div class="control-item">
+                <label for="algo-select">Algoritmo da IA</label>
+                <select id="algo-select">
+                    <option value="minimax" selected>Minimax Puro</option>
+                    <option value="alfabeta">Minimax Alfa-Beta</option>
+                </select>
+            </div>
+            
+            <div class="control-item">
+                <label for="depth-select">Profundidade da IA</label>
+                <select id="depth-select">
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="control-item">
+            <button id="restart-button">REINICIAR JOGO</button>
+        </div>
+    </div>
+
+    <h2 id="status-label">Vez do Jogador AZUL (Humano)</h2>
+
+    <canvas id="hex-canvas"></canvas>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
